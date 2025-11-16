@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <h2 class="brand">Ngafe bingits</h2>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="dashboard.html" class="active">Dashboard</a></li>
+          <li><a href="products.html">List Produk</a></li>
+          <li><a href="index.html" id="logoutLink">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <header class="main-header">
+        <button id="openMenu" class="hamburger" aria-label="Open menu">☰</button>
+        <div>
+          <h1>Dashboard</h1>
+        </div>
+      </header>
+
+      <section id="summaryCards" class="summary-row" aria-live="polite"></section>
+
+      <div class="action-area">
+        <button id="toProducts" class="btn">Lihat Data Produk</button>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

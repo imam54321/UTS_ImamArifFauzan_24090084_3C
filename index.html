@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login - UTS</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="login-body">
+  <main class="login-container">
+    <div class="login-box" role="form" aria-labelledby="loginTitle">
+      <h1 id="loginTitle">Login</h1>
+      <p class="muted">Masukkan email dan NIM (password)</p>
+
+      <form id="loginForm" class="form">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="nama@domain.com" />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password (NIM)</label>
+          <input id="password" type="password" placeholder="Contoh: 230501234" />
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Login</button>
+        </div>
+
+        <p id="loginError" class="error-message" aria-live="polite"></p>
+      </form>
+    </div>
+
+    <aside class="login-side">
+      <img src="cofffe.png" alt="">
+    </aside>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

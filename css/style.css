@@ -1,6 +1,6 @@
 /* ========== GLOBAL ========== */
 :root {
-    --bg: #f5f6fa;
+    --bg: #494c5a;
     --primary: #2d3e50;
     --accent: #4a4de7;
     --muted: #6d6d6d;
@@ -28,10 +28,19 @@ body {
     justify-content: center;
     padding: 28px;
 }
-
+#loginTitle{
+    text-align: center  ;
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.muted {
+    font-size: 13px;
+    margin-top: 20px;
+    
+}
 .login-container {
     display: flex;
-    gap: 36px;
+    gap: 100px;
     align-items: stretch;
     width: 95%;
     max-width: 1000px;
@@ -54,10 +63,57 @@ body {
     color: var(--muted);
     margin-bottom: 14px;
 }
+.login-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.2);
+    background: #e5e7e8;
+}
+
+
+.sosmed {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.btn-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    transition: 0.2s;
+}
+.opsi-login {
+    text-align: center;
+}
+.form-actions{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.btn-social img {
+    width: 20px;
+    height: 20px;
+}
+
+.btn-social:hover {
+    background: #8ca9e8;
+}
 
 .login-side {
     flex: 1;
-    background: linear-gradient(180deg, #eef3fb, #f7f9ff);
     padding: 30px;
     border-radius: 12px;
     display: flex;
@@ -121,6 +177,10 @@ input:focus {
 img{
     width: 400px;
 }
+.title{
+    color: #fff;
+}
+
 .sidebar {
     width: 240px;
     background: var(--primary);

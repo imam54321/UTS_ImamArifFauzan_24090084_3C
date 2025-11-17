@@ -1,3 +1,4 @@
+let daftarProduk = JSON.parse(localStorage.getItem('daftar-menu')) ||[];
 /* UTILITY (rupiah)*/
 function rupiah(num) {
     return new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(num);
@@ -9,12 +10,19 @@ const summary = {
     totalSales: 85,
     totalRevenue: 12500000
 };
-
-const products = [
+const pass = "24090084";
+let products = [
     { id: 1, name: "Kopi Gayo", price: 25000, stock: 50 },
     { id: 2, name: "Teh Hitam", price: 18000, stock: 30 },
-    { id: 3, name: "Coklat Aceh", price: 30000, stock: 20 }
+    { id: 3, name: "Coklat Aceh", price: 30000, stock: 20 },
+    { id: 4, name: "Kopi Arabika", price: 11000, stock:20},
+    { id: 5, name: " Kopi Pasir", price: 20000, stock: 20}
 ];
+
+daftarProduk.push(products);
+
+localStorage.setItem('daftar-menu', JSON.stringify(daftarProduk));
+console.log("menu yang tersimpan",daftarProduk);
 
 /*  LOGIN*/
 const loginForm = document.getElementById("loginForm");
@@ -29,10 +37,13 @@ if (loginForm) {
             errorMsg.textContent = "Email dan password tidak boleh kosong!";
             return;
         }
-        alert("Login berhasil!");
-        window.location.href = "dashboard.html";
-    });
-}
+        if(password === pass){
+            alert("Login Berhasil!");
+            window.location.href = "dashboard.html";
+        } else{
+            errorMsg.textContent ="Password Salah!";
+        }
+    })};
 
 /* SIDEBAR / HAMBURGER (mobile)*/
 function initSidebarToggle() {
@@ -154,10 +165,10 @@ function renderMobileList() {
 renderTable();
 renderMobileList();
 
-/* SUMMARY sync after changes*/
+
 function syncSummary() {
     summary.totalProducts = products.length;
-    // For demo, totalSales & revenue keep same; adjust as needed
+  
     renderSummaryCards();
 }
 
